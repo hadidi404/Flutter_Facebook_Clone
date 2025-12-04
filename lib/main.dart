@@ -164,6 +164,28 @@ class MyApp extends StatelessWidget {
                   },
                 ),
               ),
+              // Posts section
+              ListView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: 20,
+                itemBuilder: (context, index) {
+                  return Container(
+                    height: 400,
+                    margin: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Post ${index + 1}',
+                        style: const TextStyle(fontSize: 16),
+                      ),
+                    ),
+                  );
+                },
+              ),
             ],
           ),
         ),
